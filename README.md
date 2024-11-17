@@ -60,6 +60,10 @@ healthcheck:
 
 healthcheck of database container (mysql/mariadb example)
 
+Note:
+
+-uroot and -proot are used as examples, be sure to put limited db user or create some pinguser without database privileges for this purpose
+
 ```
 healthcheck:
   test: ["CMD-SHELL", "mysqladmin ping -h 127.0.0.1 -uroot -proot || exit 1"]
