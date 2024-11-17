@@ -30,7 +30,7 @@ Here is few examples what to add to your container in order to have proper healt
 
 healthcheck of container using "curl"
 
-`
+```
 healthcheck:
     test: ["CMD-SHELL", "curl --fail -sS -I http://127.0.0.1:80 || exit 1"]
     interval: 1m
@@ -38,11 +38,11 @@ healthcheck:
     retries: 5
     start_period: 15s
 restart: unless-stopped
-`
+```
 
 healthcheck of container using "wget"
 
-`    
+```
 healthcheck:
   test: ["CMD-SHELL", "wget --spider -q 127.0.0.1:80"]
   interval: 1m
@@ -50,11 +50,11 @@ healthcheck:
   retries: 5
   start_period: 15s
 restart: unless-stopped
-'
+```
 
 healthcheck of database container (mysql/mariadb example)
 
-`
+```
 healthcheck:
   test: ["CMD-SHELL", "mysqladmin ping -h 127.0.0.1 -uroot -proot || exit 1"]
   interval: 1m
@@ -62,4 +62,4 @@ healthcheck:
   retries: 5
   start_period: 15s
 restart: unless-stopped
-`
+```
