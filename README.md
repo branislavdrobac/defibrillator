@@ -2,6 +2,10 @@
 
 Defibrillator is a lightweight utility designed to monitor and automatically restart Docker containers that are in an unhealthy state. This service ensures high availability by regularly checking the health status of containers and recovering them when necessary.
 
+Why I need this?
+
+Native docker without swarm is unable to detect if some container is broken and need to do auto recover, this is where this service come to fill the gap
+
 ---
 
 **Features**
